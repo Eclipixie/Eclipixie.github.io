@@ -1,0 +1,144 @@
+* {
+    --col-dark: rgb(30,30,30);
+    --col-light: aliceblue;
+
+    --header-height: 80px;
+
+    --border-col: var(--col-light);
+
+    color: var(--col-light);
+}
+
+body {
+    margin: 0;
+    background-color: var(--col-dark);
+}
+
+.header {
+    background-color: var(--col-dark);
+    border-bottom: 1px solid var(--col-light);
+
+    position: fixed;
+    top: 0;
+    
+    width: 100%;
+    height: var(--header-height);
+
+    padding: 5px;
+
+    z-index: 999;
+}
+
+.content {
+    margin: 20px;
+    margin-top: calc(var(--header-height) + 20px + 20px);
+}
+
+.center-x {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: min-content;
+}
+
+.center-y {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.icon-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    padding: 40px;
+
+    height: 140px;
+}
+
+.icon-container {
+    width: 100px;
+    height: 100px;
+
+    overflow: visible;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+
+    background-color: var(--col-dark);
+
+    border: 5px solid var(--border-col);
+    border-radius: 50%;
+
+    padding: 15px;
+
+    transition: .5s;
+
+    transform-style: preserve-3d;
+    transform: scale( 1, 1 );
+
+    z-index: 2;
+
+    * {
+        width: 80%;
+        height: 80%;
+    }
+
+    img {
+        position: absolute;
+        top: 10%;
+        bottom: 10%;
+        left: 10%;
+        right: 10%;
+    }
+
+    --info-y: 0;
+
+    .icon-info {
+        --border-col: inherit;
+
+        position: absolute;
+        top: var(--info-y);
+        left: 50%;
+
+        height: 40px;
+        width: 0%;
+
+        transform: translateZ(-1px);
+        transition: .5s;
+
+        border: 0px solid var(--border-col);
+
+        background-color: var(--col-dark);
+
+        overflow: hidden;
+
+        * {
+            width: min-content;
+            height: min-content;
+
+            margin-top: calc(13px * 0.5);
+        }
+    }
+}
+
+.icon:hover {
+    transform: scale( 1.2, 1.2 );
+
+    .icon-info {
+        --border-col: inherit;
+        width: 400%;
+        left: -150%;
+
+        border: 1px solid var(--border-col);
+    }
+}
