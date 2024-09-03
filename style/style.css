@@ -1,6 +1,7 @@
 * {
     --col-dark: rgb(30,30,30);
     --col-light: aliceblue;
+    --col-sub: rgb(150,150,150);
 
     --header-height: 80px;
 
@@ -112,7 +113,7 @@ body {
 
         border: 0px solid var(--border-col);
 
-        background-color: var(--col-dark);
+        background: transparent;
 
         overflow: hidden;
 
@@ -130,6 +131,7 @@ body {
 
     .icon-info-left, .icon-info-right {
         height: calc(100px * 1.2 / 4);
+        width: 0;
         
         * {
             padding-left: 5px;
@@ -170,4 +172,14 @@ body {
         width: 200%;
         left: 50%;
     }
+}
+
+.subheading {
+    font-size: 15px;
+    color: var(--col-sub);
+    padding: 5px;
+}
+
+.small-text {
+    font-size: 15px;
 }
