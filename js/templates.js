@@ -60,52 +60,52 @@ function damageIcon(name, colour, imageURL, desc, factionDamage, subtext="") {
     return html
 }
 
-$("#basic-damage").append(damageIcon("Damage", "rgba(41,50,57,255)", "resources/DamageIcon.png", 
+$("#basic-damage").append(damageIcon("Damage", "rgba(41,50,57,255)", "../resources/DamageIcon.png", 
     damageInfo["Damage"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]));
-$("#basic-damage").append(damageIcon("Impact", "rgba(52,66,66,255)", "resources/ImpactIcon.png", 
+$("#basic-damage").append(damageIcon("Impact", "rgba(52,66,66,255)", "../resources/ImpactIcon.png", 
     damageInfo["Impact"][0],
     [1.5, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]));
-$("#basic-damage").append(damageIcon("Puncture", "rgba(53,47,41,255)", "resources/PunctureIcon.png", 
+$("#basic-damage").append(damageIcon("Puncture", "rgba(53,47,41,255)", "../resources/PunctureIcon.png", 
     damageInfo["Puncture"][0],
     [1.0, 1.0, 1.5, 1.0, 1.0, 1.0, 1.5, 1.0, 1.0, 1.0, 1.0]));
-$("#basic-damage").append(damageIcon("Slash", "rgba(56,42,43,255)", "resources/SlashIcon.png", 
+$("#basic-damage").append(damageIcon("Slash", "rgba(56,42,43,255)", "../resources/SlashIcon.png", 
     damageInfo["Slash"][0], // needs calculator
     [1.0, 1.0, 1.0, 1.0, 1.5, 1.0, 1.0, 1.0, 1.5, 1.0, 1.0]));
 
-$("#elemental-damage").append(damageIcon("Cold", "rgba(49,102,230,255)", "resources/ColdIcon.png", 
+$("#elemental-damage").append(damageIcon("Cold", "rgba(49,102,230,255)", "../resources/ColdIcon.png", 
     damageInfo["Cold"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 1.0, 1.0, 1.0]));
-$("#elemental-damage").append(damageIcon("Electricity", "rgba(73,35,112,255)", "resources/ElectricityIcon.png", 
+$("#elemental-damage").append(damageIcon("Electricity", "rgba(73,35,112,255)", "../resources/ElectricityIcon.png", 
     damageInfo["Electricity"][0], // needs calculator
     [1.0, 1.0, 1.0, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 1.0]));
-$("#elemental-damage").append(damageIcon("Heat", "rgba(119,54,0,255)", "resources/HeatIcon.png", 
+$("#elemental-damage").append(damageIcon("Heat", "rgba(119,54,0,255)", "../resources/HeatIcon.png", 
     damageInfo["Heat"][0], // needs calculator
     [1.0, 0.5, 1.0, 1.0, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]));
-$("#elemental-damage").append(damageIcon("Toxin", "rgba(42,76,51,255)", "resources/ToxinIcon.png", 
+$("#elemental-damage").append(damageIcon("Toxin", "rgba(42,76,51,255)", "../resources/ToxinIcon.png", 
     damageInfo["Toxin"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 1.0, 1.0]));
 
-$("#combinations-one").append(damageIcon("Blast", "rgba(84,29,32,255)", "resources/BlastIcon.png", 
+$("#combinations-one").append(damageIcon("Blast", "rgba(84,29,32,255)", "../resources/BlastIcon.png", 
     damageInfo["Blast"][0], // needs calculator
     [1.0, 1.0, 1.0, 0.5, 1.0, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0], "Heat + Cold"));
-$("#combinations-one").append(damageIcon("Corrosive", "rgba(49,64,7,255)", "resources/CorrosiveIcon.png", 
+$("#combinations-one").append(damageIcon("Corrosive", "rgba(49,64,7,255)", "../resources/CorrosiveIcon.png", 
     damageInfo["Corrosive"][0],
     [1.5, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 1.0, 1.0, 1.0], "Toxin + Electricity"));
-$("#combinations-one").append(damageIcon("Gas", "rgba(30,58,44,255)", "resources/GasIcon.png", 
+$("#combinations-one").append(damageIcon("Gas", "rgba(30,58,44,255)", "../resources/GasIcon.png", 
     damageInfo["Gas"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 1.0, 1.0, 1.0, 1.0, 1.0], "Toxin + Heat"));
-$("#combinations-two").append(damageIcon("Magnetic", "rgba(35,43,45,255)", "resources/MagneticIcon.png", 
+$("#combinations-two").append(damageIcon("Magnetic", "rgba(35,43,45,255)", "../resources/MagneticIcon.png", 
     damageInfo["Magnetic"][0],
     [1.0, 1.0, 1.5, 1.5, 1.0, 1.0, 1.0, 1.0, 0.5, 1.0, 1.0], "Cold + Electricity"));
-$("#combinations-two").append(damageIcon("Radiation", "rgba(152,74,0,255)", "resources/RadiationIcon.png", 
+$("#combinations-two").append(damageIcon("Radiation", "rgba(152,74,0,255)", "../resources/RadiationIcon.png", 
     damageInfo["Radiation"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 1.5, 1.0, 1.5, 1.0], "Heat + Electricity"));
-$("#combinations-two").append(damageIcon("Viral", "rgba(173,69,106,255)", "resources/ViralIcon.png", 
+$("#combinations-two").append(damageIcon("Viral", "rgba(173,69,106,255)", "../resources/ViralIcon.png", 
     damageInfo["Viral"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 1.5, 1.0, 1.0, 0.5, 1.0], "Cold + Toxin"));
     
-$("#special-damage").append(damageIcon("Void", "rgba(6,104,108,255)", "resources/VoidIcon.png", 
+$("#special-damage").append(damageIcon("Void", "rgba(6,104,108,255)", "../resources/VoidIcon.png", 
     damageInfo["Void"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5]));
 $("#special-damage").append(damageIcon("True", "rgba(86,68,30,255)", "resources/TrueIcon.png", 

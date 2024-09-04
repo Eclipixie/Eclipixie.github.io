@@ -1,4 +1,10 @@
 // name : info:tuple(shortDesc:str, longDesc:str, factions:dict(name:mul))
+    
+// bd: base damage, bdb: base damage bonuses, fdb: faction bonuses
+// add = crit * headshot
+// mbd = bd * (1 + bdb) * (1 + fdb)
+
+// sbd = status bonus damage
 
 const damageInfo = {
     "Damage": [
@@ -16,7 +22,8 @@ const damageInfo = {
         "Inflicts Weakened (max 5 stacks). Reduces enemy damage output by 40% at one stack.\nFurther stacks decrease enemy damage output by 10% per stack, up to 80% reduced damage.",
         { }
     ],
-    "Slash": [
+    // 0.35 * mbd * (1 + sbd) * (1 + fdb) * add
+    "Slash": [ 
         "Inflicts Bleed (unlimited stacks).<br>DoT every 6 seconds for every stack individually.",
         "Inflicts Bleed (unlimited stacks).<br>Deals damage every 6 seconds (first tick is delayed by 1 second). Each stack deals damage individually",
         { }
@@ -26,6 +33,7 @@ const damageInfo = {
         "Inflicts Stagger (max 5 stacks).<br>Staggers enemies for 6s. Reapplication resets the stagger. Ospreys, Tenno and bosses are immune to stagger.<br>Increases Parazon mercy kill threshold by 8% (max HP or existing?) per stack, up to 80% max health.",
         { }
     ],
+    // 0.5 * mbd * (1 + sbd) * (1 + fdb) * add
     "Toxin": [
         "Inflicts Poison (unlimited stacks).<br>DoT directly to health every 6 seconds for every stack individually.",
         "Inflicts Stagger (max 5 stacks).<br>Staggers enemies for 6s. Reapplication resets the stagger. Ospreys, Tenno and bosses are immune to stagger.<br>Increases Parazon mercy kill threshold by 8% (max HP or existing?) per stack, up to 80% max health.",
@@ -80,5 +88,9 @@ const damageInfo = {
         "Is unaffected by all forms of damage reduction and vulnerability. Bypasses shields, but not overguard.",
         "Is unaffected by all forms of damage reduction and vulnerability. Bypasses shields, but not overguard.",
         { }
+    ],
+    "Cinematic": [
+        "Is unaffected by all forms of damage reduction and vulnerability.",
+        "Is unaffected by all forms of damage reduction and vulnerability.",
     ]
 };
