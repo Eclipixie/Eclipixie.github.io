@@ -47,8 +47,8 @@ function damageIcon(name, colour, imageURL, desc, factionDamage, subtext="") {
     html = "";
 
     html += '<div class="icon center-y" style="--border-col: '+colour+'"><img src="'+imageURL+'" alt="">';
-    html += '<div class="icon-info" style="--info-y: -40px; height: calc(40px + 120px); background-color: var(--col-dark);">';
-    html += '<img src="'+imageURL+'" class="center-x" style="max-width: 70%; opacity: 0.3;">';
+    html += '<div class="icon-info-background icon-info">';
+    html += '<img src="'+imageURL+'" class="center-x">';
     html += '</div>';
     html += '<div class="icon-info" style="--info-y: -40px"><h2 class="center-x center-y">'+name+'</h2></div>';
     for (let i = 0; i < factionDamages.length; i++) {
