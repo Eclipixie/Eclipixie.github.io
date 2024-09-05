@@ -108,6 +108,6 @@ $("#combinations-two").append(damageIcon("Viral", "rgba(173,69,106,255)", "../re
 $("#special-damage").append(damageIcon("Void", "rgba(6,104,108,255)", "../resources/VoidIcon.png", 
     damageInfo["Void"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.5]));
-$("#special-damage").append(damageIcon("True", "rgba(86,68,30,255)", "resources/TrueIcon.png", 
+$("#special-damage").append(damageIcon("True", "rgba(86,68,30,255)", "../resources/TrueIcon.png", 
     damageInfo["True"][0],
     [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]));

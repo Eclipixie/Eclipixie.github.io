@@ -55,13 +55,100 @@ At 10 stacks, the target becomes Frozen (max 1 stack, 3 second duration). Frozen
 
 Inflicts Tesla Chain (unlimited stacks, 6 second independent duration).
 
-Tesla Chain Crowd Controls the target, and deals 3m AoE damage every second for 6 seconds. This is affected by Critical Damage, Stealth Bonuses, and Headshots.
+Tesla Chain Crowd Controls the target, and deals 3m AoE damage every second. This is affected by Critical Damage, Stealth Bonuses, and Headshots.
 
 Tesla Chain damage can hit Headshots, however its Headshot damage multiplier is 1x.
 
 ### Heat
 **Infested 1.5x, Kuva Grineer 0.5x**
 
-Inflicts Ignite (unlimited stacks, 6 second independent duration).
+Inflicts Ignite (unlimited stacks, unlimited duration).
 
 Ignite Crowd Controls enemies, reduces armour by up to 50% (exact numbers unknown) and deals damage every 6 seconds (first tick is delayed by 1 second).
+
+### Toxin
+**Narmer 1.5x**
+
+Inflicts Posion (unlimited stacks, unlimited duration).
+
+Poison deals damage every 6 seconds (first tick is delayed by 1 second).
+
+## Combination Damage
+### Blast
+*Heat + Cold*
+
+**Infected Deimos 1.5x, Corpus Amalgam 0.5x**
+
+Inflicts Detonate (max 10 stacks, 1.5 second independent duration).
+
+Detonate stacks explode for 30% base damage when they expire.
+
+Upon reaching 10 stacks or if the target dies, all stacks explode simultaneously for 300% base damage in a 5m AoE centered on the target. This explosion does not apply to the target.
+
+### Corrosive
+*Toxin + Electricity*
+
+**Grineer 1.5x, Kuva Grineer 1.5x, Sentien 0.5x**
+
+Inflicts Corrosion (max 10 replacing stacks, 8 second independent duration).
+
+Corrosion decreases the target's armour by 20% + 6% per stack (including the first).
+
+### Gas
+*Toxin + Heat*
+
+**Infested Deimos 1.5x**
+
+Inflicts Gas Cloud (max 10 replacing stacks, 6 second independent duration).
+
+Gas Cloud deals 3m AoE damage every second. This radius is increased by 0.3m for every stack (including the first), up to 6m.
+
+### Magnetic
+*Electricity + Cold*
+
+**Corpus 1.5x, Corpus Amalgam 1.5x, Narmer 0.5x**
+
+Inflicts Disrupt (max 10 replacing stacks, 6 second independent duration).
+
+Disrupt increases damage dealt to the target's overguard and shield by 100% + 25% per stack after the first, to a maximum of 325%.
+
+Enemies with Disrupt also have reduced natural shield regeneration.
+
+Tenno with Disrupt lose 30 energy per second for 3 seconds.
+
+### Radiation
+*Heat + Electricity*
+
+**Sentient 1.5x, The Murmur 1.5x, Orokin 0.5x**
+
+Inflicts Confusion (max 10 replacing stacks, 12 second independent duration).
+
+Targets cannot tell friend from foe, and all enemies consider the target an enemy.
+
+Damage from enemy friendly fire is increased by 100% + 50% more damage per stack after the first, up to 550%.
+
+### Viral
+*Cold + Toxin*
+
+**Orokin 1.5x, Infested Deimos 0.5x, The Murmur 0.5x**
+
+Inflicts Virus (max 10 replacing stacks, 6 second independent duration).
+
+Viral increases damage dealt to target's health by 100% + 25% per stack after the first, up to 325%.
+
+## Special Damage
+### Void
+
+**Zariman 1.5x**
+
+Only available through Operator form. Xaku is the only Warframe that can deal Void damage.
+
+Inflict Bullet Attractor (max 1 stack, 1.5s duration).
+
+Creates a 2.5m bubble around the target which attracts bullets (behaving exactly the same way as Mag's magnetise).
+
+### True
+
+Ignores Shields, but not Health or Overguard.
+
+https://eclipixie.github.io/damage
