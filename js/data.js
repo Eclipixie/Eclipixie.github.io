@@ -14,7 +14,7 @@ const damageInfo = {
     ],
     "Impact": [
         "Inflicts Stagger (<5 stacks).<br>6s crowd control.<br>Increases Parazon mercy kill threshold.",
-        "Inflicts Stagger (max 5 stacks).<br>Staggers enemies for 6s. Reapplication resets the stagger. Ospreys, Tenno and bosses are immune to stagger.<br>Increases Parazon mercy kill threshold by 8% (max HP or existing?) per stack, up to 80% max health.",
+        "Inflicts Stagger (max 5 stacks).<br>Staggers enemies for 6s. Reapplication resets the stagger. Ospreys, Tenno and bosses are immune to stagger.<br>Increases Parazon mercy kill threshold by 8% max HP per stack, up to 80% max health.",
         { }
     ],
     "Puncture": [

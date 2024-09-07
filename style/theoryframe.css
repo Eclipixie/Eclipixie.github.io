@@ -31,8 +31,11 @@ body {
 }
 
 .content {
-    margin: 20px;
     margin-top: calc(var(--header-height) + 20px + 20px);
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 70%;
 }
 
 .center-x {
@@ -47,6 +50,7 @@ body {
     margin-bottom: auto;
 }
 
+/* #region Icons */
 .icon-row {
     display: flex;
     flex-direction: row;
@@ -60,21 +64,22 @@ body {
     height: 140px;
 
     overflow-x: visible;
+
+    .icon {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
 }
 
 .icon {
     min-width: 100px;
     min-height: 100px;
-
     background-color: var(--col-dark);
 
     border: 5px solid var(--border-col);
     border-radius: 50%;
 
     padding: 15px;
-
-    margin-left: 80px;
-    margin-right: 80px;
 
     transition: .5s;
 
@@ -186,6 +191,109 @@ body {
         top: -20%;
     }
 }
+/* #endregion */
+
+/* #region Panels */
+.panel-grid {
+    margin: 20px 0 40px 0;
+
+    height: min-content;
+    width: 100%;
+    
+    .panel-row {
+        margin: 20px 0 20px 0;
+
+        display: flex;
+        flex-direction: row;
+
+        .left-panel, .right-panel {
+            width: 50%;
+            top: 0;
+            display: flex;
+        }
+
+        .left-panel {
+            left: 0;
+            flex-direction: row;
+        }
+        
+        .right-panel {
+            right: 0;
+            flex-direction: row-reverse;
+        }
+    }
+}
+/* #endregion */
+
+/* #region Damage Information */
+.damage-info-panel {
+    display: flex;
+    font-size: 19px;
+
+    .overview {
+        width: 30%;
+
+        .icon {
+            aspect-ratio: 1;
+
+            width: 50%;
+        }
+
+        * {
+            width: min-content;
+        }
+
+        h2 {
+            margin-bottom: 2px;
+            margin-top: 10px;
+        }
+
+        h3 {
+            white-space: nowrap;
+            margin-top: 0px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .description {
+        width: 70%;
+
+        white-space: pre-line;
+    }
+}
+
+.left-panel {
+    text-align: left;
+
+    .overview {
+        * { margin-right: auto; }
+    }
+    .description { padding: 0 15px 0 15px; }
+}
+
+.right-panel {
+    text-align: right;
+
+    .overview {
+        * { margin-left: auto; }
+    }
+    .description { padding: 0 15px 0 15px; }
+}
+/* #endregion */
+
+/* #region Values */
+.val-duration {
+    color: rgb(45, 179, 45);
+}
+
+.val-strength {
+    color: rgb(187, 31, 31);
+}
+
+.val-effeciency {
+    color: rgb(53, 53, 214);
+}
+/* #endregion */
 
 .subheading {
     font-size: 15px;
