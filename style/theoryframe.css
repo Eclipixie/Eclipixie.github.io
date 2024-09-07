@@ -8,11 +8,21 @@
     --border-col: var(--col-light);
 
     color: var(--col-light);
+
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 body {
     margin: 0;
     background-color: var(--col-dark);
+}
+
+h1 {
+    margin-bottom: 0;
 }
 
 .header {
@@ -195,13 +205,14 @@ body {
 
 /* #region Panels */
 .panel-grid {
-    margin: 20px 0 40px 0;
+    margin: 15px 0 50px 0;
+    border-top: 1px solid var(--col-light);
 
     height: min-content;
     width: 100%;
     
     .panel-row {
-        margin: 20px 0 20px 0;
+        margin: 35px 0 35px 0;
 
         display: flex;
         flex-direction: row;
@@ -239,9 +250,7 @@ body {
             width: 50%;
         }
 
-        * {
-            width: min-content;
-        }
+        * { width: min-content; }
 
         h2 {
             margin-bottom: 2px;
@@ -253,6 +262,10 @@ body {
             margin-top: 0px;
             margin-bottom: 8px;
         }
+
+        b { color: rgb(45, 179, 45); }
+
+        br + b { color: rgb(187, 31, 31); }
     }
 
     .description {
