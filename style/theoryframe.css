@@ -3,6 +3,11 @@
     --col-light: aliceblue;
     --col-sub: rgb(150,150,150);
 
+    --col-health: rgba(187,37,39,255);
+    --col-shield: rgba(0,187,216,255);
+    --col-armour: rgba(224,166,48,255);
+    --col-energy: rgb(14,44,167);
+
     --header-height: 80px;
 
     --border-col: var(--col-light);
@@ -98,6 +103,10 @@ h1 {
 
     z-index: 2;
 
+    overflow: hidden;
+
+    aspect-ratio: 1;
+
     * {
         width: 80%;
         height: 80%;
@@ -109,6 +118,16 @@ h1 {
         bottom: 10%;
         left: 10%;
         right: 10%;
+    }
+
+    .full {
+        top: 0%;
+        bottom: 0%;
+        left: 0%;
+        right: 0%;
+
+        width: 100%;
+        height: 100%;
     }
 
     --info-y: 0;
@@ -305,6 +324,36 @@ h1 {
 
 .val-effeciency {
     color: rgb(53, 53, 214);
+}
+/* #endregion */
+
+/* #region Warframe Information */
+.warframe-info {
+    width: 100%;
+
+    div {
+        padding: 20px;
+    }
+
+    .overview {
+        width: 20%;
+
+        border-right: 1px solid var(--col-light);
+
+        h2 {
+            margin: 5px;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style-type: none;
+                padding: 5px;
+            }
+        }
+    }
 }
 /* #endregion */
 
