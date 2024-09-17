@@ -368,16 +368,19 @@ h1 {
         padding: 0;
 
         .ability {
-            /* display: flex;
-            flex-direction: row; */
+            width: calc(50% - 40px - 2px);
 
-            width: calc(50% - 40px);
+            border: 1px solid var(--col-light);
+            border-radius: 10px;
+
+            margin: 10px;
+            padding: 10px;
 
             h2 {
                 margin-top: auto;
                 margin-bottom: auto;
 
-                padding-top: 5px;
+                padding-top: 2px;
             }
 
             div {
