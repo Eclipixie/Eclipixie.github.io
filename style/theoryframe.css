@@ -376,6 +376,8 @@ h1 {
             h2 {
                 margin-top: auto;
                 margin-bottom: auto;
+
+                padding-top: 5px;
             }
 
             div {
@@ -394,6 +396,10 @@ h1 {
                 margin-top: auto;
                 margin-bottom: auto;
             }
+        }
+
+        .passive {
+            width: 100%;
         }
 
         .helminth img {
