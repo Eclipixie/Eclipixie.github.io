@@ -16,8 +16,6 @@ let implemented = [
 function SetFrame(frameName) {
     let frame = parsed[frameName];
 
-    console.log(frame.abilities);
-
     $("title").text(frame.name);
 
     $("#frameName").text(frame.name);
@@ -28,8 +26,6 @@ function SetFrame(frameName) {
 
     frameIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Warframes/" + frame.name + ".png.webp";
     primeIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Primes/" + frame.name + "Prime.png.webp";
-    
-    console.log(frame.name);
     
     swapIconFunc = "SwapImg('#wfIcon', '" + frameIcon + "', '" + primeIcon + "')"
     
@@ -83,3 +79,10 @@ function SetFrame(frameName) {
 }
 
 SetFrame("Jade");
+
+for (let i = 0; i < Object.values(frames).length; i++) {
+    const frameName = Object.values(frames)[i];
+    $("#frameSelector").prepend('<option value="'+frameName+'">'+frameName+'</option>')
+}
+
+$("#frameSelector").val("Jade");
