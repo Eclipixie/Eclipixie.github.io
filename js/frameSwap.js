@@ -13,28 +13,21 @@ let implemented = [
     "Excalibur"
 ];
 
+let prime = false;
+
+let frameBaseName;
+let frameIcon;
+
 function SetFrame(frameName) {
     let frame = parsed[frameName];
-
-    $("title").text(frame.name);
-
-    $("#frameName").text(frame.name);
-    $("#frameHealth").text(frame.health);
-    $("#frameShield").text(frame.shield);
-    $("#frameArmour").text(frame.armour);
-    $("#frameEnergy").text(frame.energy);
+    frameBaseName = frameName;
 
     frameIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Warframes/" + frame.name + ".png.webp";
-    primeIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Primes/" + frame.name + "Prime.png.webp";
     
-    swapIconFunc = "SwapImg('#wfIcon', '" + frameIcon + "', '" + primeIcon + "')"
+    swapIconFunc = "SwitchPrime()";
     
     if (frame.primeInfo == undefined) { swapIconFunc = "javascript:console.log('No Prime icon.')"; }
-    
-    $("#frameIcon").attr("onclick", swapIconFunc);
-    
-    $("#frameIcon img").attr("src", frameIcon);
-    
+
     abilityIcons = [];
 
     for (let i = 0; i < 4; i++) {
@@ -54,6 +47,7 @@ function SetFrame(frameName) {
         }
     }
 
+    //#region Abilities
     $(".passive").contents().filter(function(){ return this.nodeType == 3; }).last()
         .replaceWith(frame.passiveDescription);
 
@@ -76,9 +70,46 @@ function SetFrame(frameName) {
     $("#ability4 div img").attr("src", abilityIcons[3]);
     $("#ability4").contents().filter(function(){ return this.nodeType == 3; }).last()
         .replaceWith(frame.abilities[3].description);
+    //#endregion
+
+    SetPrime(false);
+}
+
+function SetPrime(setPrime) {
+    prime = setPrime;
+
+    let frame = parsed[frameBaseName];
+
+    if (setPrime) { frame = frame.primeInfo; }
+
+    $("title").text(frame.name);
+
+    $("#frameName").text(frame.name);
+    $("#frameHealth").text(frame.health + 100);
+    $("#frameShield").text(frame.shield + 100);
+    $("#frameArmour").text(frame.armor);
+    $("#frameEnergy").text(frame.power + 50);
+
+    if (setPrime) {
+        frameIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Primes/" + frame.name.replace(/ /g,'') + ".png.webp";
+    }
+    else {
+        frameIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Warframes/" + frame.name + ".png.webp";
+    }
+    
+    $("#frameIcon").attr("onclick", swapIconFunc);
+    
+    $("#frameIcon img").attr("src", frameIcon);
+}
+
+function SwitchPrime() {
+    prime = !prime;
+    SetPrime(prime);
 }
 
 SetFrame("Jade");
+
+SetPrime(false);
 
 for (let i = 0; i < Object.values(frames).length; i++) {
     const frameName = Object.values(frames)[i];
