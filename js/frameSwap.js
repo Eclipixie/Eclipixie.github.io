@@ -28,29 +28,29 @@ function SetFrame(frameName) {
 
     frameIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Warframes/" + frame.name + ".png.webp";
     primeIcon = "https://media.overframe.gg/v2/256x/Lotus/Interface/Icons/StoreIcons/Primes/" + frame.name + "Prime.png.webp";
-
-    abilityIcons = [];
-
+    
     console.log(frame.name);
-
+    
     swapIconFunc = "SwapImg('#wfIcon', '" + frameIcon + "', '" + primeIcon + "')"
     
-    if (Object.keys(frame).includes("primeInfo")) { swapIconFunc = "javascript:console.log('No Prime icon.')"; }
+    if (frame.primeInfo == undefined) { swapIconFunc = "javascript:console.log('No Prime icon.')"; }
     
     $("#frameIcon").attr("onclick", swapIconFunc);
-
+    
     $("#frameIcon img").attr("src", frameIcon);
+    
+    abilityIcons = [];
 
     for (let i = 0; i < 4; i++) {
         if (implemented.includes(frame.name)) {
             abilityIcons.push("../resources/images/abilityIcons/" + frame.abilities[i].imageName);
         }
         else {
-            words = frame.abilities[0].imageName.split(/[-]+/);
+            words = frame.abilities[i].imageName.split(/[-]+/);
             abilName = "";
 
-            for (let i = 0; i < words.length; i++) {
-                const word = words[i];
+            for (let j = 0; j < words.length; j++) {
+                const word = words[j];
                 abilName += word.charAt(0).toUpperCase() + word.slice(1);
             }
 
@@ -81,3 +81,5 @@ function SetFrame(frameName) {
     $("#ability4").contents().filter(function(){ return this.nodeType == 3; }).last()
         .replaceWith(frame.abilities[3].description);
 }
+
+SetFrame("Jade");
