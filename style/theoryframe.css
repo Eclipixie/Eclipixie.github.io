@@ -27,7 +27,7 @@ body {
 
 h1 { margin-bottom: 0; }
 
-.header {
+#header {
     background-color: var(--col-dark);
     border-bottom: 1px solid var(--col-light);
 
@@ -42,7 +42,7 @@ h1 { margin-bottom: 0; }
     z-index: 3;
 }
 
-.content {
+#content {
     margin-top: calc(var(--header-height) + 20px + 20px);
     margin-left: auto;
     margin-right: auto;
@@ -375,17 +375,9 @@ h1 { margin-bottom: 0; }
         flex-wrap: wrap;
         flex-direction: row;
 
-        padding: 5px;
+        padding: 0;
 
-        .ability {
-            width: calc(50% - 40px - 2px);
-
-            border: 1px solid var(--col-light);
-            border-radius: 10px;
-
-            margin: 10px;
-            padding: 10px;
-        }
+        .ability { width: calc(50% - (20px + 1px + 10px) * 2); }
 
         .passive { width: 100%; }
     }
@@ -393,26 +385,34 @@ h1 { margin-bottom: 0; }
 
 .helminth div img { border: 2px solid rgb(142, 11, 11); }
 
-.ability img {
-    border-radius: 50%;
-    height: 30px;
+.ability {
+    border: 1px solid var(--col-light);
+    border-radius: 10px;
 
-    margin-right: 7px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
+    margin: 10px;
+    padding: 10px;
 
-.ability div {
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-
-    h3 {
+    img {
+        border-radius: 50%;
+        height: 30px;
+    
+        margin-right: 7px;
         margin-top: auto;
         margin-bottom: auto;
+    }
+
+    div {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
     
-        padding-top: 3px;
+        h3 {
+            margin-top: auto;
+            margin-bottom: auto;
+        
+            padding-top: 3px;
+        }
     }
 }
 
