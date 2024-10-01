@@ -40,7 +40,7 @@ function InjectHelminth(root) {
             '<div class="ability">' +
             '<div>' +
             '<img src="'+root+'resources/images/abilityIcons/'+ability.imageName+'" alt="">' +
-            '<h3>'+ability.name+'</h3>' +
+            '<h3>'+ability.name+' ('+FrameInfo(key).name+' subsume)</h3>' +
             '</div>' +
             ability.description +
             '</div>';
