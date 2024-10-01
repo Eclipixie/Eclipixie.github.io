@@ -398,8 +398,8 @@ h1 {
     }
 }
 
-.helminth img {
-    border: 2px solid rgb(142, 11, 11);
+.helminth div img {
+    border: 2px solid rgb(142, 11, 11) !important;
 }
 
 .ability img {
