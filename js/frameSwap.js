@@ -62,7 +62,7 @@ function SetFrame(frameName) {
 
     // this targets the second element in the contents of the target element. I need it so it doesn't delete the icon and header
     $(".passive").contents().filter(function(){ return this.nodeType == 3; }).last() 
-        .replaceWith(frame.passiveDescription);
+        .replaceWith(frame.passiveDescription.replace(abilSanitisation, ""));
 
     $("#ability1 div h3").text(frame.abilities[0].name);
     $("#ability1 div img").attr("src", abilityIcons[0]);

@@ -25,9 +25,7 @@ body {
     background-color: var(--col-dark);
 }
 
-h1 {
-    margin-bottom: 0;
-}
+h1 { margin-bottom: 0; }
 
 .header {
     background-color: var(--col-dark);
@@ -87,8 +85,6 @@ h1 {
 }
 
 .icon {
-    min-width: 100px;
-    min-height: 100px;
     background-color: var(--col-dark);
 
     border: 5px solid var(--border-col);
@@ -349,18 +345,14 @@ h1 {
 
     margin-bottom: 40px;
 
-    div {
-        padding: 20px;
-    }
+    div { padding: 20px; }
 
     .overview {
         width: 20%;
 
         border-right: 1px solid var(--col-light);
 
-        h2 {
-            margin: 5px;
-        }
+        h2 { margin: 5px; }
 
         ul {
             padding: 0;
@@ -371,6 +363,9 @@ h1 {
                 padding: 5px;
             }
         }
+
+        /* Height is determined by aspect ratio */
+        .icon { width: clamp(80px, 60%, 150px); }
     }
 
     .abilities {
@@ -392,15 +387,11 @@ h1 {
             padding: 10px;
         }
 
-        .passive {
-            width: 100%;
-        }
+        .passive { width: 100%; }
     }
 }
 
-.helminth div img {
-    border: 2px solid rgb(142, 11, 11) !important;
-}
+.helminth div img { border: 2px solid rgb(142, 11, 11); }
 
 .ability img {
     border-radius: 50%;
@@ -480,6 +471,4 @@ h1 {
     padding: 5px;
 }
 
-.small-text {
-    font-size: 15px;
-}
+.small-text { font-size: 15px; }
