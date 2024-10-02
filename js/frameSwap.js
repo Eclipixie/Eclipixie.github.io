@@ -94,13 +94,17 @@ function SwitchPrime() {
     SetPrime(prime);
 }
 
-SetFrame("Jade");
+$(document).ready(function() {
+    initSelected = "Jade";
 
-SetPrime(false);
-
-for (let i = 0; i < Object.values(frames).length; i++) {
-    const frameName = Object.values(frames)[i];
-    $("#frameSelector").append('<option value="'+frameName+'">'+frameName+'</option>')
-}
-
-$("#frameSelector").val("Jade");
+    SetFrame("Jade");
+    
+    SetPrime(false);
+    
+    for (let i = 0; i < Object.values(frames).length; i++) {
+        const frameName = Object.values(frames)[i];
+        $("#frameSelector").append('<option value="'+frameName+'">'+frameName+'</option>')
+    }
+    
+    $("#frameSelector").val("Jade");
+});
