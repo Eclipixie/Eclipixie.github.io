@@ -95,9 +95,15 @@ function SwitchPrime() {
 }
 
 $(document).ready(function() {
-    initSelected = "Jade";
+    let initSelected = "Jade";
 
-    SetFrame("Jade");
+    let data = ParseGet();
+
+    if (Object.keys(data).includes("frame")) { initSelected = data["frame"]; }
+
+    initSelected = initSelected.charAt(0).toUpperCase() + initSelected.slice(1);
+
+    SetFrame(initSelected);
     
     SetPrime(false);
     
@@ -106,5 +112,5 @@ $(document).ready(function() {
         $("#frameSelector").append('<option value="'+frameName+'">'+frameName+'</option>')
     }
     
-    $("#frameSelector").val("Jade");
+    $("#frameSelector").val(initSelected);
 });

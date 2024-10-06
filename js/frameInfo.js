@@ -96,7 +96,7 @@ function InjectHelminth(root) {
             '<div class="ability">' +
             '<div>' +
             '<img src="'+root+'resources/images/abilityIcons/'+ability.imageName+'" alt="">' +
-            '<h3>'+ability.name+' ('+FrameInfo(key).name+' subsume)</h3>' +
+            '<h3>'+ability.name+' (<a href="https://eclipixie.github.io/frames?frame='+FrameInfo(key).name+'">'+FrameInfo(key).name+'</a> subsume)</h3>' +
             '</div>' +
             ability.description +
             '</div>';
