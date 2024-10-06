@@ -42,6 +42,7 @@ const helminth = {
     "Ivara": 0,
     "Jade": 2,
     "Khora": 1,
+    "Koumei": 2,
     "Kullervo": 0,
     "Lavos": 1,
     "Limbo": 0,
