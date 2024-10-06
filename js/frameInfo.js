@@ -11,7 +11,8 @@ let frames = Object.keys(parsed);
 const implemented = [
     "Excalibur",
     "Mag",
-    "Volt"
+    "Volt",
+    "Koumei"
 ];
 
 // defines helminth abilities for each frame
