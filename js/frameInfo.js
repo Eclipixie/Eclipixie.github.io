@@ -9,10 +9,11 @@ let frames = Object.keys(parsed);
 //#region Frame Indexes
 // determines which frames have their ability icons applied
 const implemented = [
+    "Caliban",
     "Excalibur",
+    "Koumei",
     "Mag",
-    "Volt",
-    "Koumei"
+    "Volt"
 ];
 
 // defines helminth abilities for each frame
