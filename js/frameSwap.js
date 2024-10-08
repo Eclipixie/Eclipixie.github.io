@@ -25,7 +25,7 @@ function SetFrame(frameName) {
         }
 
         if (Object.keys(helminth).includes(frame.name) && // check if helminth is recorded for the frame
-            helminth[frame.name] === i) { // check if we're looking at the correct ability
+            helminth[frame.name][0] === i) { // check if we're looking at the correct ability
             $("#ability" + (i + 1)).attr("class", "ability helminth");
         }
         else { $("#ability" + (i + 1)).attr("class", "ability"); }
