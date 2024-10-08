@@ -3,6 +3,8 @@
     --col-light: aliceblue;
     --col-sub: rgb(150,150,150);
 
+    --col-url: rgb(40, 184, 228);
+
     --col-health: rgba(187,37,39,255);
     --col-shield: rgba(0,187,216,255);
     --col-armour: rgba(224,166,48,255);
@@ -24,6 +26,8 @@ body {
     margin: 0;
     background-color: var(--col-dark);
 }
+
+a { color: var(--col-url); }
 
 h1 { margin-bottom: 0; }
 
