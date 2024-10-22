@@ -145,7 +145,7 @@ function HelminthInfo(frame = "") {
   }
 }
 
-function InjectHelminth(root) {
+function InjectHelminth(imgSRCRoot) {
   let injection = "";
 
   for (let i = 0; i < Object.keys(helminth).length; i++) {
@@ -164,7 +164,7 @@ function InjectHelminth(root) {
       '<div class="ability">' +
       "<div>" +
       '<img src="' +
-      root +
+      imgSRCRoot +
       "resources/images/abilityIcons/" +
       ability.imageName +
       '" alt="">' +
