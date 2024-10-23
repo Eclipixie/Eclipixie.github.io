@@ -184,5 +184,5 @@ function InjectHelminth(imgSRCRoot) {
 
   console.log(injection);
 
-  $("#content").append(injection);
+  $("main").append(injection);
 }
