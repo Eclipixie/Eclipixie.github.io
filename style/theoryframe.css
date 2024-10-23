@@ -96,8 +96,6 @@ h1 { margin-bottom: 0; }
 
     padding: 15px;
 
-    transition: .5s;
-
     transform-style: preserve-3d;
     transform: scale( 1, 1 );
 
@@ -128,83 +126,6 @@ h1 { margin-bottom: 0; }
 
         width: 100%;
         height: 100%;
-    }
-
-    --info-y: 0;
-
-    .icon-info {
-        --border-col: inherit;
-
-        position: absolute;
-        top: var(--info-y);
-        left: 50%;
-
-        height: 40px;
-        width: 0%;
-
-        transform: translateZ(-1px);
-        transition: .5s;
-
-        border: 0px solid var(--border-col);
-
-        background: transparent;
-
-        overflow: hidden;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-
-        * {
-            width: max-content;
-            height: min-content;
-
-            margin-top: calc(13px * 0.5);
-        }
-    }
-
-    .icon-info-left, .icon-info-right {
-        height: calc(100px * 1.2 / 4);
-        width: 0;
-        
-        * {
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-    }
-
-    .icon-info-left {
-        justify-content: start;
-        flex-direction: row;
-    }
-
-    .icon-info-right {
-        justify-content: end;
-        flex-direction: row-reverse;
-    }
-}
-
-.icon:hover, .iconhover {
-    transform: scale( 1.2, 1.2 );
-
-    z-index: 4;
-
-    .icon-info {
-        --border-col: inherit;
-        width: 400%;
-        left: -150%;
-
-        border: 1px solid var(--border-col);
-    }
-
-    .icon-info-left {
-        width: 200%;
-        left: -150%;
-    }
-
-    .icon-info-right {
-        width: 200%;
-        left: 50%;
     }
 }
 
@@ -287,10 +208,18 @@ h1 { margin-bottom: 0; }
         br + b { color: rgb(187, 31, 31); }
     }
 
-    .description {
+    article {
         width: 70%;
 
         white-space: pre-line;
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+        h3 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
     }
 }
 
@@ -300,7 +229,6 @@ h1 { margin-bottom: 0; }
     .overview {
         * { margin-right: auto; }
     }
-    .description { padding: 0 15px 0 15px; }
 }
 
 .right-panel {
@@ -309,7 +237,6 @@ h1 { margin-bottom: 0; }
     .overview {
         * { margin-left: auto; }
     }
-    .description { padding: 0 15px 0 15px; }
 }
 /* #endregion */
 
