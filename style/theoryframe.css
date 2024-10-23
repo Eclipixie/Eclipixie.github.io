@@ -276,8 +276,6 @@ h1 { margin-bottom: 0; }
 
     margin-bottom: 40px;
 
-    div { padding: 20px; }
-
     .overview {
         width: 20%;
 
@@ -296,7 +294,11 @@ h1 { margin-bottom: 0; }
         }
 
         /* Height is determined by aspect ratio */
-        .icon { width: clamp(80px, 60%, 150px); }
+        figure {
+            margin-left: 0;
+            margin-right: 0;
+            width: clamp(80px, 60%, 150px);
+        }
     }
 
     .abilities {
@@ -321,7 +323,7 @@ h1 { margin-bottom: 0; }
     border-radius: 10px;
 
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
 
     img {
         border-radius: 50%;
