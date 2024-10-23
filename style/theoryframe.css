@@ -31,7 +31,7 @@ a { color: var(--col-url); }
 
 h1 { margin-bottom: 0; }
 
-#header {
+#header,header {
     background-color: var(--col-dark);
     border-bottom: 1px solid var(--col-light);
 
@@ -46,7 +46,7 @@ h1 { margin-bottom: 0; }
     z-index: 3;
 }
 
-#content {
+#content,main {
     margin-top: calc(var(--header-height) + 20px + 20px);
     margin-left: auto;
     margin-right: auto;
@@ -471,6 +471,9 @@ h1 { margin-bottom: 0; }
 
 /* #region Mod Information */
 .mod-info {
+    display: flex;
+    flex-direction: row;
+
     width: 100%;
     /* height: 80px; */
 
@@ -481,6 +484,8 @@ h1 { margin-bottom: 0; }
 
     .img-container {
         width: 15%;
+
+        margin-right: 10px;
 
         img {
             width: 100%;
