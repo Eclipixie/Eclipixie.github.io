@@ -27,6 +27,19 @@ body {
     background-color: var(--col-dark);
 }
 
+select {
+    display: block;
+
+    background-color: var(--col-dark);
+    font-size: 20px;
+
+    padding: 10px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;    
+}
+
 a { color: var(--col-url); }
 
 h1 { margin-bottom: 0; }
@@ -255,19 +268,6 @@ h1 { margin-bottom: 0; }
 /* #endregion */
 
 /* #region Warframe Information */
-#frameSelector {
-    display: block;
-
-    background-color: var(--col-dark);
-    font-size: 20px;
-
-    padding: 10px;
-
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;    
-}
-
 .warframe-info {
     display: flex;
     flex-direction: row;
