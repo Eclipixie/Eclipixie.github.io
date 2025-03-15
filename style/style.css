@@ -1,0 +1,68 @@
+* {
+    font-family: "JetBrains Mono", monospace;
+    --dark-col: #111111;
+    --light-col: #ffffff;
+    --primary-col: #000000;
+    --secondary-col: #faca2d;
+
+    background-color: var(--dark-col);
+    color: var(--light-col);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    border-radius: 35px;
+    overflow: hidden;
+    width: min-content;
+    white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+}
+
+#content {
+    width: calc(50%);
+}
+
+#capsule-links {
+    width: min-content;
+    white-space: nowrap;
+}
+
+#capsule-links * {
+    padding: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+
+    margin: 0 5px 0 5px;
+}
+
+.margin-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* #region capsules */
+h1 .capsule-dark, h1 .capsule-light {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.capsule-light {
+    background-color: var(--secondary-col);
+    color: var(--primary-col);
+}
+
+.capsule-dark {
+    background-color: var(--primary-col);
+    color: var(--secondary-col);
+}
+
+.shader-capsule {
+    background-image: url("../assets/mango.png");
+    background-size: 100% 100%;
+}
+/* #endregion */
