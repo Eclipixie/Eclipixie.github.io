@@ -13,18 +13,26 @@ body {
     overflow-x: hidden;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     border-radius: 35px;
     overflow: hidden;
     width: min-content;
     white-space: nowrap;
     margin-left: auto;
     margin-right: auto;
-    font-size: 50px;
+    margin-top: 200px;
+}
+
+h1 { font-size: 50px; }
+h2 { font-size: 40px; }
+
+hgroup {
+    margin-top: -10px;
+    margin-bottom: 30px;
 }
 
 #content {
-    width: calc(50%);
+    width: 80%;
 }
 
 #capsule-links {
@@ -40,9 +48,31 @@ h1 {
     margin: 0 5px 0 5px;
 }
 
+#technology div {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+
+    width: 99%;
+
+    section {
+        width: 33%;
+        border: 1px solid white;
+
+        h3 {
+            margin-top: 0;
+        }
+    }
+}
+
 .margin-center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
 }
 
 /* #region capsules */
@@ -65,4 +95,27 @@ h1 .capsule-dark, h1 .capsule-light {
     background-image: url("../assets/mango.png");
     background-size: 100% 100%;
 }
+
+.cybersec-capsule {
+    box-shadow: inset 2px 2px lime;
+    border-radius: 4px 0 0 0;
+}
 /* #endregion */
+
+.horizontal-list {
+    width: min-content;
+
+    padding: 0;
+
+    text-wrap: nowrap;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+    li {
+        margin-left:  20px;
+        margin-right: 20px;
+
+        font-size: larger;
+    }
+}
