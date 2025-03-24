@@ -8,26 +8,76 @@
     color: var(--light-col);
 }
 
+/* #region content blocks */
 header, footer {
-    height: 100px;
+    height: 130px;
     width: 100%;
+    box-sizing: border-box;
+
+    border: 2px solid transparent;
+
+    padding: 25px;
+
+    display: flex;
 }
 
-header { border-bottom: 2px solid var(--light-col); }
-footer { border-top: 2px solid var(--light-col); }
+header { border-bottom-color: var(--light-col); }
+footer { border-top-color: var(--light-col); }
+
+header {
+    
+}
 
 body {
     background-color: var(--dark-col);
     overflow-x: hidden;
+
+    margin: 0;
+}
+/* #endregion */
+
+/* #region header content */
+#logo {
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+.header-sect {
+    display: flex;
+    
+    * { margin-right: 40px; }
+    
+    a {
+        display: flex;
+        align-content: center;
+    }
+
+    *:last-child { margin-right: 0; }
+
+    #logo { margin-right: -20px; }
+}
+
+.header-sect:last-child {
+    margin-left: auto;
+}
+/* #endregion */
+
+/* #region headers */
+main *:is(h1, h2, h3, h4, h5, h6) {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 180px;
+}
+
+header *:is(h1, h2, h3, h4, h5, h6) {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     width: min-content;
     white-space: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 180px;
 }
 
 h1 { font-size: 50px; border-radius: 35px; }
@@ -37,6 +87,7 @@ hgroup {
     margin-top: -10px;
     margin-bottom: 30px;
 }
+/* #endregion */
 
 p:last-child {
     margin-bottom: 0;
@@ -52,14 +103,14 @@ p:last-child {
 #capsule-links {
     width: min-content;
     white-space: nowrap;
-}
+    
+    * {
+        padding: 5px;
+        padding-right: 8px;
+        padding-left: 8px;
 
-#capsule-links * {
-    padding: 5px;
-    padding-right: 8px;
-    padding-left: 8px;
-
-    margin: 0 5px 0 5px;
+        margin: 0 5px 0 5px;
+    }
 }
 
 #technology div {
@@ -88,6 +139,7 @@ p:last-child {
     }
 }
 
+/* #region centers */
 .margin-center {
     margin-left: auto;
     margin-right: auto;
@@ -97,6 +149,7 @@ p:last-child {
     display: flex;
     justify-content: center;
 }
+/* #endregion */
 
 /* #region capsules */
 h1 .capsule-dark, h1 .capsule-light {
